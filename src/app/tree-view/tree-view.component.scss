@@ -1,0 +1,28 @@
+.tree {
+  list-style: none;
+  font-size: 14px;
+  color: #333;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.node {
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  white-space: normal;
+}
+
+.deleted {
+  color: #999;
+  text-decoration: line-through;
+}
+
+ul {
+  margin: 0;
+  padding-left: 18px;
+  border-left: 1px dashed #ccc;
+}
+

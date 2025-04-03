@@ -1,0 +1,17 @@
+<ul class="tree">
+    @for (node of treeData; track $index) {
+      <li>
+        <div class="node" [class.deleted]="node.is_deleted" (click)="node.children?.length ? toggleNode(node) : null">
+          @if (node.children && node.children.length) {
+            {{ node.expanded ? '▲' : '▼' }}
+          }
+          {{ node.id }} - {{ node.title }}
+        </div>
+        @if(node.expanded) {
+          <ul>
+            <app-tree-view [treeData]="node.children"></app-tree-view>
+          </ul>
+        }
+      </li>
+    }
+</ul>

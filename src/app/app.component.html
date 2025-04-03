@@ -1,0 +1,5 @@
+<div class="tree-container">
+  @if (data$ | async; as treeData) {
+  <app-tree-view [treeData]="treeData.data | markDeleted"></app-tree-view>
+  }
+</div>
